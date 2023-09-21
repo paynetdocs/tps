@@ -1,1 +1,48 @@
-site_name: My Docs
+site_name: Спецификация по TPS
+
+nav:
+ - Home: index.md
+ - 1. Базовые сведения и основной функционал: pages/basics.md 
+ - 2. Авторизация и аутентификация: pages/auth.md
+ - 3. Баланс партнера: pages/balance.md
+ - 4. Базовый сценарий осуществления перевода: pages/basic_scenario.md
+ - 5. A2C перевод на Mastercard: pages/a2c.md
+ - 6. Перевод на банковский аккаунт, используя SAPI: pages/sapi.md
+ - 7. Получение статуса операции перевода: pages/getstatus.md
+ - 8. Отчет по операциям: pages/tr_report.md
+ - 9. Нотификации системы TPS: pages/notifications.md
+ - 10. Получение доступных сервисов: pages/getallservices.md
+ - 11. Получение списка параметров сервиса: pages/getsrvInfobycode.md
+ - 12. Коды  ошибок: pages/errorcodes.md
+ - 13. TPS Vault: pages/tps_vault.md
+
+theme:
+  name: material
+  logo: assets/images/PP_logo.png
+  favicon: assets/images/pp_favicon.png
+  palette: 
+    - scheme: default
+      toggle:
+        icon: material/lightbulb
+        name: Ночь
+    - scheme: slate
+      toggle:
+        icon: material/lightbulb-outline
+        name: День
+  language: ru
+      
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+plugins:
+  - search:
+      lang: 
+        - en
+        - ru
