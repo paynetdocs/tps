@@ -1,3 +1,5 @@
 # Спецификация по TPS 
 
-![Paypoint](pages/img/pplogo.png)
+</br>
+
+<p  align="center"><img src="pages/img/pplogo.svg" alt=""></p>
