@@ -1,7 +1,7 @@
-name: CI
+name: ci
 on:
   push:
-    branches:
+    branches: 
       - main
 permissions:
   contents: write
@@ -21,4 +21,8 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install mkdocs-material 
-      - run: mkdocs gh-deploy --force
+      - run: git config --global user.name = "Romaniuc Alexandr"
+      - run: git config --global user.email = "romaniuc.alexandr@gmail.com"
+      - run: git fetch
+      - run: pip install mike
+      - run: mike deploy --push --update-aliases -b gh-pages 1.0 latest
