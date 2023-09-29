@@ -2,6 +2,7 @@ site_name: Спецификация по TPS
 
 nav:
  - Home: index.md
+ - Changelog: pages/changelog.md
  - 1. Базовые сведения и основной функционал: pages/basics.md 
  - 2. Авторизация и аутентификация: pages/auth.md
  - 3. Баланс партнера: pages/balance.md
@@ -15,6 +16,7 @@ nav:
  - 11. Получение списка параметров сервиса: pages/getsrvInfobycode.md
  - 12. Коды  ошибок: pages/errorcodes.md
  - 13. TPS Vault: pages/tps_vault.md
+
 
 theme:
   name: material
@@ -50,3 +52,6 @@ plugins:
 extra:
   version:
     provider: mike
+  generator: false
+
+copyright: Copyright © 2023 Paynet Services SRL.
