@@ -1,15 +1,11 @@
-# Получение статуса операции перевода
+# 7. Получение статуса операции перевода
 
 **GetStatus**  
 
-|                                 |Value                                                                                     |
-|---------------------------------|------------------------------------------------------------------------------------------|
-|**HTTPS Method**                 |POST                                                                                      |
-|**Endpoint**                     |<span style="color:red">{{Base URL}}</span>//api/Transfers/{transfer_key}                 |
-|                                 |<span style="color:red">{{Base URL}}</span>//api/Transfers?partnerExternalId={external_id}|
-|**Headers**                      |TPS_API_KEY - Ключ аутентификации,                                                        |
-|                                 |TPS_API_REQUEST_ID - ID запроса (numeric)                                                 |
-|                                 |TPS_API_SIGN - подпись аутентификации                                                     |
+| **HTTPS Method** | POST                                                         |
+| ---------------- | ------------------------------------------------------------ |
+| **Endpoint**     | <span style="color:red">{{Base URL}}</span>//api/Transfers/{transfer_key}<br /><span style="color:red">{{Base URL}}</span>//api/Transfers?partnerExternalId={external_id} |
+| **Headers**      | TPS_API_KEY - Ключ аутентификации,<br />TPS_API_KEY - Ключ аутентификации,<br />TPS_API_SIGN - подпись аутентификации |
 
 **Описание**  
 Механизм позволяет партнеру производить мониторинг переводов через запросы GetStatus, для получения статуса перевода, используя уникальные идентификаторы (transfer_key).

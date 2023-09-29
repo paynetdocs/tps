@@ -16,13 +16,12 @@ Transfer amount - сумма, которую получит бенефициар
 
 ### GetBalance
 
-|                                 |Value                                   |
-|---------------------------------|----------------------------------------|
-|**HTTPS Method**                 |GET                 |
-|**Endpoint**                     |{{Base URL}}/api/balance    |
-|**Headers**                      |TPS_API_KEY - Ключ аутентификации,     |
-|                                 |TPS_API_REQUEST_ID - ID запроса (numeric)  |
-|                                 |TPS_API_SIGN - подпись аутентификации  |
+| **HTTPS Method** | GET                                                          |
+| ---------------- | ------------------------------------------------------------ |
+| Endpoint         | <span style="color:red">{{Base URL}}</span>/api/balance      |
+| Headers          | TPS_API_KEY - Ключ аутентификации,<br />TPS_API_REQUEST_ID - ID запроса (numeric)<br />TPS_API_SIGN - подпись аутентификации |
+
+
 
 
 **Описание:**
