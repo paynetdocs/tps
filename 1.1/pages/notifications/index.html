@@ -74,6 +74,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#8-tps" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -400,6 +405,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -508,6 +515,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -522,9 +531,43 @@
                   
 
 
-  <h1>8. Нотификации системы TPS</h1>
-
-<p>Will be added at the version 1.1</p>
+<h1 id="8-tps">8. Нотификации системы TPS</h1>
+<hr />
+<p><strong>Описание:</strong></p>
+<p>Cистема TPS способна извещать систему партнёра о статусе платежа. Для этого следует передать адрес сервиса системы партнёра, куда будут отправляться нотификации. Cистема подписывает нотификацию секретным ключом, известным обеим сторонам. Подпись вычисляется на базе основных данных. </p>
+<p>В случае проблем связи, система TPS попробует 3 раза обратиться к системе партнёра и в случае «неудачи» завершит попытки нотификации. Подтверждением со стороны партнера является https code со значением 200, независимо от контекста ответа, все остальные ответы система считает как неуспешные и попытки отправки повторяются.  </p>
+<p>Для получения информации о проведенных платежах разработаны специальные сервис методы, которые позволяют получить детальную информацию о денежном переводе. Система TPS считает что на стороне системы партнёра самостоятельно выстраивается логика обработки дублирующих нотификаций.</p>
+<p><strong>Возвращаемый объект:</strong></p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">  </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="err">​</span><span class="w">   </span><span class="nt">&quot;reg_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-04-15 15:48:27&quot;</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">&quot;confirm_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-04-15 16:48:27&quot;</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10000</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="nt">&quot;currency_code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MDL&quot;</span><span class="p">,</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Mastercart transfer to card&quot;</span><span class="p">,</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;mastercard_a2c_md&quot;</span><span class="p">,</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="nt">&quot;clearing_amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100550</span><span class="p">,</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="nt">&quot;clearing_currency&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MDL&quot;</span><span class="p">,</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;confirmed&quot;</span><span class="p">,</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="nt">&quot;transfer_key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;df3311a0-4517-ee11-8b90-00155d325a01&quot;</span><span class="p">,</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="nt">&quot;external_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1681224505</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<p><strong>Правило расчета подписи:</strong></p>
+<p>sign_raw = code +":"+ id +":"+ amount +":"+ external_id +":"+  currency_code +":"+ status; 
+TPS_API_SIGN  = HMACSHA512((sign_raw ), secret_password) </p>
+<p>Пример: sign_raw = mastercard_a2c_md:100:120000:1681224505:MDL:confirmed</p>
 
 
 
