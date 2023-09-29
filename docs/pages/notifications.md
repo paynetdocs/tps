@@ -1,1 +1,1 @@
-Will be add at the version 1.1
+Will be added at the version 1.1
