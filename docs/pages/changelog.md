@@ -2,12 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
-[1.1] - 2023-09-29
+[1.0] - 2023-09-29
 
 **Added**
-Добавлена версионность документации
+Создание первой версии документации
+
 **Fixed**
+-
 
 **Changed**
+-
 
 **Removed**
+-
