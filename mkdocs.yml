@@ -2,7 +2,6 @@ site_name: Спецификация по TPS
 
 nav:
  - Home: index.md
- - 0. Changelog: pages/changelog.md
  - 1. Базовые сведения и основной функционал: pages/basics.md 
  - 2. Авторизация и аутентификация: pages/auth.md
  - 3. Баланс партнера: pages/balance.md
@@ -15,6 +14,7 @@ nav:
  - 10. Получение списка параметров сервиса: pages/getsrvInfobycode.md
  - 11. Коды  ошибок: pages/errorcodes.md
  - 12. TPS Vault: pages/tps_vault.md
+ - 13. Changelog: pages/changelog.md
 
 
 theme:
