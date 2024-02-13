@@ -5,7 +5,7 @@
 | HTTPS Method | GET                                                          |
 | ------------ | ------------------------------------------------------------ |
 | Endpoint     | <span style="color:red">{{Base URL}}</span>/api/Services                                    |
-| Headers      | TPS_API_KEY - Ключ аутентификаци, <br />TPS_API_REQUEST_ID - ID запроса (numeric),<br />TPS_API_SIGN - подпись аутентификации |
+| Headers      | API_KEY - Ключ аутентификаци, <br />API_REQUEST_ID - ID запроса (numeric),<br />API_SIGN - подпись аутентификации |
 
 **Описание:**
 
