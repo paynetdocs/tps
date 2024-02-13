@@ -561,7 +561,7 @@
 </tr>
 <tr>
 <td><strong>Headers</strong></td>
-<td>TPS_API_KEY - Ключ аутентификации,<br />TPS_API_KEY - Ключ аутентификации,<br />TPS_API_SIGN - подпись аутентификации</td>
+<td>API_KEY - Ключ аутентификации,<br />API_KEY - Ключ аутентификации,<br />API_SIGN - подпись аутентификации</td>
 </tr>
 </tbody>
 </table>
@@ -569,8 +569,8 @@
 Механизм позволяет партнеру производить мониторинг переводов через запросы GetStatus, для получения статуса перевода, используя уникальные идентификаторы (transfer_key).</p>
 <p><strong>Response: Success - <span style="color:green">200 OK</span></strong></p>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;reg_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-06-28 08:52:36&quot;</span><span class="p">,</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;confirm_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-06-28 08:53:25&quot;</span><span class="p">,</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;reg_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-28 08:52:36&quot;</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;confirm_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-28 08:53:25&quot;</span><span class="p">,</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10000</span><span class="p">,</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">&quot;currency_code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MDL&quot;</span><span class="p">,</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Mastercard transfer to card&quot;</span><span class="p">,</span>
@@ -589,7 +589,7 @@
 </span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">                </span><span class="nt">&quot;receiver_country&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MDA&quot;</span><span class="p">,</span>
 </span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">                </span><span class="nt">&quot;sender_first_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Tolgahan&quot;</span><span class="p">,</span>
 </span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">                </span><span class="nt">&quot;sender_last_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;COLPN&quot;</span><span class="p">,</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">                </span><span class="nt">&quot;sender_address&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Chisinau str Bogdan-Voievod 22 ap 27&quot;</span><span class="p">,</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">                </span><span class="nt">&quot;sender_address&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Chisinau str Bogdan-Voievod 22&quot;</span><span class="p">,</span>
 </span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">                </span><span class="nt">&quot;sender_country&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MDA&quot;</span>
 </span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">            </span><span class="p">}</span>
 </span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="p">}</span>

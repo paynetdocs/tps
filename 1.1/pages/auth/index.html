@@ -620,23 +620,21 @@
 
 
 <h1 id="2">2. Авторизация и аутентификация</h1>
-<p>Каждый запрос в системе является уникальным, относительно идентификатора (TPS_API_REQUEST_ID) со стороны партнера в разрезе ключа аутентификации. Повторный запрос с повторяющимся значением будет отвергнут сервером. Для аутентификации запроса необходимо в заголовок каждого запроса подать параметры: <br />
-<strong>TPS_API_KEY</strong> -  Ключ аутентификации  (paynet TPS api key)<br />
-<strong>TPS_API_REQUEST_ID</strong> -  идентификатор запроса (уникальное целочисленное значение )<br />
-<strong>TPS_API_SIGN</strong>   - подпись аутентификации,  каждого запроса ( Your signature authenticating this request. )  </p>
+<p>Каждый запрос в системе является уникальным, относительно идентификатора (API_REQUEST_ID) со стороны партнера в разрезе ключа аутентификации. Повторный запрос с повторяющимся значением будет отвергнут сервером. Для аутентификации запроса необходимо в заголовок каждого запроса подать параметры: <br />
+<strong>API_KEY</strong> -  Ключ аутентификации 
+<strong>API_REQUEST_ID</strong> -  идентификатор запроса (уникальное целочисленное значение )<br />
+<strong>API_SIGN</strong>   - подпись аутентификации,  каждого запроса ( Your signature authenticating this request. )  </p>
 <p>Подпись аутентификации,  вычисляется с помощью алгоритма HMAC-SHA512  (результат - 128 символов) используя шаблон:</p>
-<p>Шаблон:
-   = HMACSHA512((<strong>TPS_API_KEY + '-TPS-'+ TPS_API_REQUEST_ID</strong>), <strong>secret_password</strong>) </p>
 <p><strong>Пример расчета подписи аутентификации  на примере данных:</strong> 
-TPS_API_KEY:    915281AD-22CA-ED11-8B8E-00155D325A04
-TPS_API_REQUEST_ID:   10101,  <br />
-TPS_API_PASSWORD:  15A9C2D0-D2DC-4FA8-95FE-2253DE1BBE2D  </p>
+API_KEY:    915281AD-22CA-ED11-8B8E-00155D325A04
+API_REQUEST_ID:   10101,  <br />
+API_PASSWORD:  15A9C2D0-D2DC-4FA8-95FE-2253DE1BBE2D  </p>
 <p></br></p>
-<p><span style="color:red">Внимание!!! Параметр</span>   TPS_API_REQUEST_ID   <span style="color:red">=  00212   будет конвертирован в 212</span></p>
+<p><span style="color:red">Внимание!!! Параметр</span>   API_REQUEST_ID   <span style="color:red">=  00212   будет конвертирован в 212</span></p>
 <p></br></p>
 <p><strong>Пример:</strong>
-TPS_API_KEY + '-TPS-'+ TPS_API_REQUEST_ID = “A9CC0276-3766-4827-AB23-5F0EF6017C7C+TPS+10101”</p>
-<p>TPS_API_SIGN = HMACSHA512(“A9CC0276-3766-4827-AB23-5F0EF6017C7C+TPS+10101”)  и пароль. <br />
+API_KEY + API_REQUEST_ID = “A9CC0276-3766-4827-AB23-5F0EF6017C7C+TPS+10101”</p>
+<p>API_SIGN = HMACSHA512(“A9CC0276-3766-4827-AB23-5F0EF6017C7C+TPS+10101”)  и пароль. <br />
 Результат подсчёта значения подписи:<br />
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>bced3aec71136dbe9d1122d6636de78751c640f29b64d37528c0cf48ea59845067c6ac3ff29ec64ce6808c8e76f37eade6b57f91d36b13458af00d6fdbc29fa4
 </span></code></pre></div></p>
@@ -651,7 +649,7 @@ TPS_API_KEY + '-TPS-'+ TPS_API_REQUEST_ID = “A9CC0276-3766-4827-AB23-5F0EF6017
 </br></p>
 <p>В запросе не подан один из параметров.  http response code: 400 (Bad Request)
 <div class="language-json highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="nt">&quot;msg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Please check necessary headers parameters TPS_API_KEY, TPS_API_REQUEST_ID, TPS_API_SIGN&quot;</span><span class="p">,</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="nt">&quot;msg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Please check necessary headers parameters API_KEY, API_REQUEST_ID, API_SIGN&quot;</span><span class="p">,</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">}</span>
 </span></code></pre></div>

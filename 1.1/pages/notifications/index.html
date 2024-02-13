@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#8-tps" class="md-skip">
+        <a href="#8" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -545,18 +545,18 @@
                   
 
 
-<h1 id="8-tps">8. Нотификации системы TPS</h1>
+<h1 id="8">8. Нотификации системы</h1>
 <hr />
 <p><strong>Описание:</strong></p>
-<p>Cистема TPS способна извещать систему партнёра о статусе платежа. Для этого следует передать адрес сервиса системы партнёра, куда будут отправляться нотификации. Cистема подписывает нотификацию секретным ключом, известным обеим сторонам. Подпись вычисляется на базе основных данных. </p>
-<p>В случае проблем связи, система TPS попробует 3 раза обратиться к системе партнёра и в случае «неудачи» завершит попытки нотификации. Подтверждением со стороны партнера является https code со значением 200, независимо от контекста ответа, все остальные ответы система считает как неуспешные и попытки отправки повторяются.  </p>
-<p>Для получения информации о проведенных платежах разработаны специальные сервис методы, которые позволяют получить детальную информацию о денежном переводе. Система TPS считает что на стороне системы партнёра самостоятельно выстраивается логика обработки дублирующих нотификаций.</p>
+<p>Cистема способна извещать систему партнёра о статусе платежа. Для этого следует передать адрес сервиса системы партнёра, куда будут отправляться нотификации. Cистема подписывает нотификацию секретным ключом, известным обеим сторонам. Подпись вычисляется на базе основных данных. </p>
+<p>В случае проблем связи, система попробует 3 раза обратиться к системе партнёра и в случае «неудачи» завершит попытки нотификации. Подтверждением со стороны партнера является https code со значением 200, независимо от контекста ответа, все остальные ответы система считает как неуспешные и попытки отправки повторяются.  </p>
+<p>Для получения информации о проведенных платежах разработаны специальные сервис методы, которые позволяют получить детальную информацию о денежном переводе. Система считает что на стороне системы партнёра самостоятельно выстраивается логика обработки дублирующих нотификаций.</p>
 <p><strong>Возвращаемый объект:</strong></p>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">  </span><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="err">​</span><span class="w">   </span><span class="nt">&quot;reg_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-04-15 15:48:27&quot;</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="err">​</span><span class="w">   </span><span class="nt">&quot;reg_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-15 15:48:27&quot;</span><span class="p">,</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">&quot;confirm_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-04-15 16:48:27&quot;</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">&quot;confirm_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-15 16:48:27&quot;</span><span class="p">,</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10000</span><span class="p">,</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
@@ -578,10 +578,6 @@
 </span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
 </span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w"> </span><span class="p">}</span>
 </span></code></pre></div>
-<p><strong>Правило расчета подписи:</strong></p>
-<p>sign_raw = code +":"+ id +":"+ amount +":"+ external_id +":"+  currency_code +":"+ status; 
-TPS_API_SIGN  = HMACSHA512((sign_raw ), secret_password) </p>
-<p>Пример: sign_raw = mastercard_a2c_md:100:120000:1681224505:MDL:confirmed</p>
 
 
 
