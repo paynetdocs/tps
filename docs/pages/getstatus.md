@@ -5,7 +5,7 @@
 | **HTTPS Method** | POST                                                         |
 | ---------------- | ------------------------------------------------------------ |
 | **Endpoint**     | <span style="color:red">{{Base URL}}</span>//api/Transfers/{transfer_key}<br /><span style="color:red">{{Base URL}}</span>//api/Transfers?partnerExternalId={external_id} |
-| **Headers**      | TPS_API_KEY - Ключ аутентификации,<br />TPS_API_KEY - Ключ аутентификации,<br />TPS_API_SIGN - подпись аутентификации |
+| **Headers**      | API_KEY - Ключ аутентификации,<br />API_KEY - Ключ аутентификации,<br />API_SIGN - подпись аутентификации |
 
 **Описание**  
 Механизм позволяет партнеру производить мониторинг переводов через запросы GetStatus, для получения статуса перевода, используя уникальные идентификаторы (transfer_key).
@@ -14,8 +14,8 @@
 
 ```json
 {
-    "reg_date": "2023-06-28 08:52:36",
-    "confirm_date": "2023-06-28 08:53:25",
+    "reg_date": "2024-01-28 08:52:36",
+    "confirm_date": "2024-01-28 08:53:25",
     "amount": 10000,
     "currency_code": "MDL",
     "name": "Mastercard transfer to card",
@@ -34,7 +34,7 @@
                 "receiver_country": "MDA",
                 "sender_first_name": "Tolgahan",
                 "sender_last_name": "COLPN",
-                "sender_address": "Chisinau str Bogdan-Voievod 22 ap 27",
+                "sender_address": "Chisinau str Bogdan-Voievod 22",
                 "sender_country": "MDA"
             }
 }

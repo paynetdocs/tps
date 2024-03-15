@@ -7,8 +7,8 @@
 |**HTTPS method:**|POST                                     |
 |**Endpoint:**    |{{Base URL}}/api/Transfers               |
 |**Headers:**     |PS_API_KEY - Authentication key          |
-|                 |TPS_API_REQUEST_ID. Request ID (numeric).|
-|                 | TPS_API_SIGN - Authentication signature |
+|                 |API_REQUEST_ID. Request ID (numeric).    |
+|                 |API_SIGN - Authentication signature      |
 
 </br>
 
@@ -58,7 +58,7 @@
 
 
 ```json
-"reg_date": "2023-08-11T14:14:09",
+"reg_date": "2024-01-11T14:14:09",
 "confirm_date": "",
 "amount": 100000,
 "currency_code": "MDL",

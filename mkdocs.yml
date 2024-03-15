@@ -1,4 +1,4 @@
-site_name: Спецификация по TPS
+site_name: Переводы A2C
 
 nav:
  - Home: index.md
@@ -9,11 +9,11 @@ nav:
  - 5. A2C перевод на Mastercard: pages/a2c.md
  - 6. Перевод на банковский аккаунт, используя SAPI: pages/sapi.md
  - 7. Получение статуса операции перевода: pages/getstatus.md
- - 8. Нотификации системы TPS: pages/notifications.md
+ - 8. Нотификации системы: pages/notifications.md
  - 9. Получение доступных сервисов: pages/getallservices.md
  - 10. Получение списка параметров сервиса: pages/getsrvInfobycode.md
  - 11. Коды  ошибок: pages/errorcodes.md
- - 12. TPS Vault: pages/tps_vault.md
+ - 12. Логика хранения уязвимых данных: pages/tps_vault.md
  - 13. Changelog: pages/changelog.md
 
 
@@ -53,4 +53,4 @@ extra:
     provider: mike
   generator: false
 
-copyright: Copyright © 2023 Paynet Services SRL.
+copyright: Copyright © 2024 Sample project specification example by A. Romaniuc (Paynet Services SRL).
