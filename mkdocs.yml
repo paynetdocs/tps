@@ -18,7 +18,7 @@ nav:
 
 
 theme:
-  name: material
+  name: gitbook
   logo: assets/images/PP_logo.png
   favicon: assets/images/pp_favicon.png
   palette: 
